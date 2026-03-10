@@ -21,7 +21,7 @@
 		</classes>
 	</test>
 	<test name="firefoxTest">
-		<parameter name="Browser" value="Chrome"></parameter>
+		<parameter name="Browser" value="FireFox"></parameter>
 		<classes>
 			<class name="testscript.HomePageTest">
 
