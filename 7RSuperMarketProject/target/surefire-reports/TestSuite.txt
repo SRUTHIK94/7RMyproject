@@ -1,0 +1,43 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 161.175 s <<< FAILURE! - in TestSuite
+testscript.HomePageTest.verifyHomePageData  Time elapsed: 11.892 s  <<< FAILURE!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=145.0.7632.160)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [03553ce991facebb65ac914bfe0c394a, clickElement {id=f.8A59D63E80C6443AB18DDB7E7B4E78E4.d.546134CD0B294BDE53ED7FF0DEC2B470.e.30}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\User\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53984}, goog:processID: 8052, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53984/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (03553ce991facebb65ac914bfe0c394a)] -> xpath: (//a[@class='dropdown-item'])[1]]
+Session ID: 03553ce991facebb65ac914bfe0c394a
+	at testscript.HomePageTest.verifyHomePageData(HomePageTest.java:16)
+
+testscript.HomePageTest.verifyHomePageData  Time elapsed: 13.912 s  <<< FAILURE!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: MicrosoftEdge=145.0.3800.82)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [8dc602a064de617b6f4925e2535c0418, clickElement {id=f.7DB5BB89634A5C7FD7ACFC92DB6FD604.d.0AF0F52A95157596ECF31D7E74F9DBDB.e.36}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.82, fedcm:accounts: true, goog:processID: 13468, ms:edgeOptions: {debuggerAddress: localhost:54128}, msedge: {msedgedriverVersion: 145.0.3800.82 (de59ede99663..., userDataDir: C:\Users\User\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54128/devtoo..., se:cdpVersion: 145.0.3800.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (8dc602a064de617b6f4925e2535c0418)] -> xpath: (//a[@class='dropdown-item'])[1]]
+Session ID: 8dc602a064de617b6f4925e2535c0418
+	at testscript.HomePageTest.verifyHomePageData(HomePageTest.java:16)
+
+testscript.HomePageTest.verifyHomePageData  Time elapsed: 11.556 s  <<< FAILURE!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=145.0.7632.160)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [49ffc02b99ce029dfa84cc9b63d54017, clickElement {id=f.772BE1EC22B8B0D62FBF8F5E2D1B046A.d.38795A1EA80B1A98213B3D886C503F0D.e.30}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\User\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57904}, goog:processID: 6396, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57904/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (49ffc02b99ce029dfa84cc9b63d54017)] -> xpath: (//a[@class='dropdown-item'])[1]]
+Session ID: 49ffc02b99ce029dfa84cc9b63d54017
+	at testscript.HomePageTest.verifyHomePageData(HomePageTest.java:16)
+
