@@ -23,12 +23,7 @@ public class AdminUserTest extends Base{
 	  String newpassword=faker.getPassword();
 	  adminpage.newAdmin().AdminUserInfo(newusername,newpassword).saveButton();//save and run
 	
-//	  login.signIn();
-//	  AdminUser admin=new AdminUser(driver);
-//	  admin.moreInfo();
-//	  admin.newAdmin();
-//	  admin.AdminUserInfo(); 
-//	  admin.saveButton();
+
 	  boolean alertdisplayed=adminpage.isAlertMessageDisplayed();
 	  Assert.assertTrue(alertdisplayed, "USERADDEDALERTMESSAGE");
 	 

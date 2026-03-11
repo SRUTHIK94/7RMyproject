@@ -20,10 +20,9 @@ WebElement logoutbutton;
 WebElement moreinfoadmin;
 @FindBy(xpath ="(//a[@class='small-box-footer'])[9]")
 WebElement moreinfo9;
-//public void adminButton()
-//{
-//	adminbutton.click();
-//}
+@FindBy(xpath="(//i[@class='fas fa-arrow-circle-right'])[7]")
+WebElement moreNewsinfo;
+
 public AdminUser moreInfo() {
 	moreinfoadmin.click();
 	return new AdminUser(driver);
@@ -33,14 +32,16 @@ public HomePageSuperMarket adminButton()
 	adminbutton.click();
 	return this;
 }
-//public void logOutButton()
-//{
-//	logoutbutton.click();
-//}
+
 public HomePageSuperMarket logOutButton()
 {
 	logoutbutton.click();
 	return this;
+}
+public ManageNews moreNewsInfoButton()
+{
+	moreNewsinfo.click();
+	return new ManageNews(driver);
 }
 public ManageCategoryPage moreInfoManageCategory() {
 	moreinfo9.click();

@@ -19,8 +19,7 @@ public class ManageCategoryPage {
 	this.driver=driver;
 	PageFactory.initElements(driver,this);		
 	}
-//	@FindBy(xpath ="(//a[@class='small-box-footer'])[9]")
-//	WebElement moreinfo9;
+
 	@FindBy(xpath ="//a[@class='btn btn-rounded btn-danger']")
 	WebElement newbutton;
 	@FindBy(xpath ="//input[@id='category']")
@@ -35,12 +34,7 @@ public class ManageCategoryPage {
 	WebElement leftmenu;
 	@FindBy(xpath = "//button[@class='btn btn-danger']")
 	WebElement saveinfo;
-//	public ManageCategoryPage moreInfoManageCategory()
-//	{
-//		moreinfo9.click();
-//		return new ManageCategoryPage(driver);
-//		
-//	}
+
 	public ManageCategoryPage newButton()
 	{
 		newbutton.click();

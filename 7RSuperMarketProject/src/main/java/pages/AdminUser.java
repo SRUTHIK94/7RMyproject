@@ -30,10 +30,7 @@ public class AdminUser {
 		WebElement alertmsg;
 		
 	
-//	public void newAdmin()
-//	{
-//		newadmin.click();
-//	}
+
 	public AdminUser newAdmin()
 	{
 		newadmin.click();
@@ -48,10 +45,7 @@ public class AdminUser {
 	}
 	
 		
-//	public void saveButton()
-//	{
-//		saveinfo.click();
-//	}
+
 	public AdminUser saveButton()
 	{
 		saveinfo.click();

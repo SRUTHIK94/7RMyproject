@@ -23,11 +23,7 @@ public class LoginPageSuperMarket {
 	WebElement signin;
 	@FindBy(xpath = "//p[text()='Dashboard']")
 	WebElement dashboard;
-//	public void enterUsernameAndPassword(String usernamefield,String passwordfield)//passing username and password as parameter
-//	{
-//		username.sendKeys(usernamefield);//here username is webelement name and usernamefield is parameter value
-//		password.sendKeys(passwordfield);
-//	}
+
 	public LoginPageSuperMarket enterUsernameAndPassword(String usernamefield,String passwordfield)//page chaining in Login
 	{
 		username.sendKeys(usernamefield);//here username is webelement name and usernamefield is parameter value
@@ -35,10 +31,7 @@ public class LoginPageSuperMarket {
 		return this;
 	}
 	
-//	public void signIn()//signin method
-//	{
-//		signin.click();
-//	}
+
 	public HomePageSuperMarket signIn()// page chaining signin method
 	{
 		wait.elementToBeClicked(driver, signin);//object wait used to call elementtobeclicked methodfrom waitutility page

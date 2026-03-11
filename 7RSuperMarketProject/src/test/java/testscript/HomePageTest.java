@@ -14,9 +14,6 @@ public class HomePageTest extends Base {
 	  login.enterUsernameAndPassword("admin", "admin");
 	  homepage=login.signIn();
 	  homepage.adminButton().logOutButton();//chaining
-//	  login.signIn();
-//	  HomePageSuperMarket home=new HomePageSuperMarket(driver);
-//	  home.adminButton();
-//	  home.logOutButton();
+
   }
 }
