@@ -7,39 +7,34 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ManageNews {
 	WebDriver driver;
-	public ManageNews(WebDriver driver)
-	{
-		this.driver=driver;
+
+	public ManageNews(WebDriver driver) {
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		
+
 	}
-	
-	@FindBy(xpath="//a[@class='btn btn-rounded btn-danger']")
+
+	@FindBy(xpath = "//a[@class='btn btn-rounded btn-danger']")
 	WebElement newbutton;
-	@FindBy(xpath="//textarea[@id='news']")
+	@FindBy(xpath = "//textarea[@id='news']")
 	WebElement textarea;
-	@FindBy(xpath="//button[@type='submit']")
+	@FindBy(xpath = "//button[@type='submit']")
 	WebElement save;
-	
-	
-	public ManageNews newButton()
-	{
+
+	public ManageNews newManageNewsButton() {
 		newbutton.click();
 		return this;
 	}
-	public ManageNews enterNewsField(String message)
-	{
+
+	public ManageNews enterNewsField(String message) {
 		textarea.sendKeys(message);
 		return this;
-	
+
 	}
-	public ManageNews saveButton()
-	{
+
+	public ManageNews manageNewsSaveButton() {
 		save.click();
 		return this;
 	}
-	
-	
-	
 
 }

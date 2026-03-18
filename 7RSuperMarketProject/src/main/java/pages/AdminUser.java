@@ -31,7 +31,7 @@ public class AdminUser {
 		
 	
 
-	public AdminUser newAdmin()
+	public AdminUser newAdminUserButton()
 	{
 		newadmin.click();
 		return this;
@@ -46,7 +46,7 @@ public class AdminUser {
 	
 		
 
-	public AdminUser saveButton()
+	public AdminUser saveAdminUserButton()
 	{
 		saveinfo.click();
 		return this;

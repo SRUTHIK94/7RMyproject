@@ -15,7 +15,7 @@ import utilities.ExcelUtilities;
 public class LoginPageTest extends Base {
 	HomePageSuperMarket homepage;//globally homepagesupermarket created for page chaining with variable name homepage
  
-  @Test(dataProvider = "credentials",groups = "smoke")
+  @Test(description ="verify login page with valid  credentials" , dataProvider = "credentials",groups = "smoke")
   public void verifyValidUsernameAndValidPassword(String username,String password)
   {
 	  LoginPageSuperMarket page1=new LoginPageSuperMarket(driver);//globally declared driver base class
@@ -25,7 +25,7 @@ public class LoginPageTest extends Base {
 	  Assert.assertTrue(homepageisdisplayed,Constant.ERRORMESSAGEFORLOGIN);  
   }
   
-  @Test
+  @Test(description = "verify login page with invalidusername and validpassword credentials")
   @Parameters({"username","password"})
   public void verifyInValidUsernameAndValidPassword(String username,String password)//parameters only passes through xml
   {
@@ -35,7 +35,7 @@ public class LoginPageTest extends Base {
 	  boolean homepageisdisplayed=page2.isHomePageIsDisplayed();
 	  Assert.assertTrue(homepageisdisplayed,Constant.ERRORMESSAGEFORLOGIN);  
   }
-  @Test
+  @Test(description = "verify login page with validusername and invalidpassword credentials")
   @Parameters({"username","password"})
   public void verifyInValidUsernameAndInValidPassword(String usernamefield,String passwordfield)
   {
@@ -47,7 +47,7 @@ public class LoginPageTest extends Base {
 	  
   }
 
-  @Test(groups = "smoke")
+  @Test(description = "verify valid username and invalid password",groups = "smoke")
   public void verifyValidUsernameAndInValidPassword() throws IOException//excel utilities coding applied
   {
 	  LoginPageSuperMarket page4=new LoginPageSuperMarket(driver);//globally declared driver base class

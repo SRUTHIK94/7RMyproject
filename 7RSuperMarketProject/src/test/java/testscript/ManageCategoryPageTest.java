@@ -1,5 +1,7 @@
 package testscript;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -7,26 +9,27 @@ import constants.Constant;
 import pages.HomePageSuperMarket;
 import pages.LoginPageSuperMarket;
 import pages.ManageCategoryPage;
+import utilities.ExcelUtilities;
 
 public class ManageCategoryPageTest extends Base {
 	HomePageSuperMarket homepage;
 	ManageCategoryPage managecategory;
-  @Test
-  public void VerifyNewCategoryAdding(){
-	  LoginPageSuperMarket login=new LoginPageSuperMarket(driver);
-	  login.enterUsernameAndPassword("admin", "admin");
-	  homepage=login.signIn(); 
-	  managecategory = homepage.moreInfoManageCategory();
-	  managecategory.newButton();
-	  managecategory.categoryField().discountCategory().fileChoose();
-	  managecategory.scrollDown();
-	  managecategory.scrollDownToRadioMenus();
-	  managecategory.topMenus().leftMenu().saveButton();
-	  boolean homepageisdisplayed=login.isHomePageIsDisplayed();
-	  Assert.assertTrue(homepageisdisplayed,Constant.ERRORMESSAGEFORLOGIN);
 
+	@Test(description = "Verify that a new category can be added to the Manage Page")
+	public void VerifyNewCategoryAdding() throws IOException {
+		LoginPageSuperMarket login = new LoginPageSuperMarket(driver);
+		login.enterUsernameAndPassword("admin", "admin");
+		homepage = login.signIn();
+		managecategory = homepage.moreInfoManageCategory();
+		managecategory.newManageCategoryButton();
+		managecategory.manageCategoryField(ExcelUtilities.readIntegerData1(1, 2, "AdminUserTest")).discountManageCategory()
+				.manageCategoryFileChoose();
+		managecategory.manageCategoryScrollDown();
+		managecategory.manageCategoryScrollDownToRadioMenus();
+		managecategory.manageCategoryTopMenus().manageCategoryLeftMenu().manageCategorySaveButton();
+		boolean homepageisdisplayed = login.isHomePageIsDisplayed();
+		Assert.assertTrue(homepageisdisplayed, Constant.ERRORMESSAGEFORLOGIN);
 
-	  
-  }
- 
+	}
+
 }

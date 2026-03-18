@@ -36,7 +36,7 @@ public class ExcelUtilities {
 	}
 	
 	public static String readStringData1(int row,int col,String sheet) throws IOException{
-		f=new FileInputStream(Constant.ADMINUSERFILE);
+		f=new FileInputStream(Constant.TESTDATAFILE1);
 		w=new XSSFWorkbook(f);
 		sh=w.getSheet(sheet);
 		XSSFRow r=sh.getRow(row);
@@ -45,7 +45,7 @@ public class ExcelUtilities {
 	}
 	
 	public static String readIntegerData1(int row,int col,String sheet) throws IOException{
-	   f=new FileInputStream(Constant.ADMINUSERFILE);
+	   f=new FileInputStream(Constant.TESTDATAFILE1);
 	   w=new XSSFWorkbook(f);
 	   sh=w.getSheet(sheet);
 	   XSSFRow r=sh.getRow(row);
@@ -54,6 +54,8 @@ public class ExcelUtilities {
 	   return String.valueOf(val);//convert int to string using valueOf() method//
 	   //return val;
 	}
+	
+	
 
 }
 

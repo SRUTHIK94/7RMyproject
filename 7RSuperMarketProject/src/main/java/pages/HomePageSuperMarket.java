@@ -23,17 +23,17 @@ WebElement moreinfo9;
 @FindBy(xpath="(//i[@class='fas fa-arrow-circle-right'])[7]")
 WebElement moreNewsinfo;
 
-public AdminUser moreInfo() {
+public AdminUser moreHomePageInfo() {
 	moreinfoadmin.click();
 	return new AdminUser(driver);
 }
-public HomePageSuperMarket adminButton()
+public HomePageSuperMarket adminHomePageButton()
 {
 	adminbutton.click();
 	return this;
 }
 
-public HomePageSuperMarket logOutButton()
+public HomePageSuperMarket homePageLogOutButton()
 {
 	logoutbutton.click();
 	return this;
