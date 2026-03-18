@@ -1,11 +1,14 @@
 package testscript;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pages.AdminUser;
 import pages.HomePageSuperMarket;
 import pages.LoginPageSuperMarket;
+import utilities.ExcelUtilities;
 import utilities.FakerUtility;
 
 public class AdminUserTest extends Base{
@@ -14,9 +17,13 @@ public class AdminUserTest extends Base{
 	FakerUtility faker=new FakerUtility();//add faker globally
 	
   @Test(description = "verify newuser add to the AdminUser",retryAnalyzer = retry.Retry.class)
-  public void verifyAdminMoreInfo() {
+  public void verifyAdminMoreInfo() throws IOException {
 	  LoginPageSuperMarket login=new LoginPageSuperMarket(driver);
-	  login.enterUsernameAndPassword("admin", "admin");
+	  
+	  String username=ExcelUtilities.readStringData1(1, 0, "AdminUserTest");
+	  String password=ExcelUtilities.readStringData1(1, 1, "AdminUserTest");
+	  
+	  login.enterUsernameAndPassword(username, password);
 	  homepage=login.signIn();
 	  adminpage=homepage.moreInfo();
 	  String newusername=faker.getFakeFirstName();//faker methods added here from faker page

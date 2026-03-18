@@ -1,5 +1,6 @@
 package utilities;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -28,6 +29,12 @@ public class PageUtility {
 		action.moveToElement(element).click();
 		action.doubleClick(element).click();
 	}
+	 public void scrollDown(WebDriver driver,WebElement element)
+		{
+			
+			JavascriptExecutor javascript=(JavascriptExecutor) driver;
+			javascript.executeScript("arguments[0].click();", element);
+		}
 
 
 }

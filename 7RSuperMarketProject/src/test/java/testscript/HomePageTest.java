@@ -1,7 +1,9 @@
 package testscript;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constant;
 import pages.HomePageSuperMarket;
 import pages.LoginPageSuperMarket;
 
@@ -14,6 +16,8 @@ public class HomePageTest extends Base {
 	  login.enterUsernameAndPassword("admin", "admin");
 	  homepage=login.signIn();
 	  homepage.adminButton().logOutButton();//chaining
+	  boolean homepageisdisplayed=login.isHomePageIsDisplayed();
+	  Assert.assertTrue(homepageisdisplayed,Constant.ERRORMESSAGEFORLOGIN);
 
   }
 }

@@ -34,6 +34,26 @@ public class ExcelUtilities {
 	   return String.valueOf(val);//convert int to string using valueOf() method//
 	   //return val;
 	}
+	
+	public static String readStringData1(int row,int col,String sheet) throws IOException{
+		f=new FileInputStream(Constant.ADMINUSERFILE);
+		w=new XSSFWorkbook(f);
+		sh=w.getSheet(sheet);
+		XSSFRow r=sh.getRow(row);
+		XSSFCell c=r.getCell(col);
+		return c.getStringCellValue();
+	}
+	
+	public static String readIntegerData1(int row,int col,String sheet) throws IOException{
+	   f=new FileInputStream(Constant.ADMINUSERFILE);
+	   w=new XSSFWorkbook(f);
+	   sh=w.getSheet(sheet);
+	   XSSFRow r=sh.getRow(row);
+	   XSSFCell c=r.getCell(col);
+	   int val=(int)c.getNumericCellValue();//convert double to int using typecasting//
+	   return String.valueOf(val);//convert int to string using valueOf() method//
+	   //return val;
+	}
 
 }
 

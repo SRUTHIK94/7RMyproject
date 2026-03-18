@@ -1,7 +1,9 @@
 package testscript;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constant;
 import pages.HomePageSuperMarket;
 import pages.LoginPageSuperMarket;
 import pages.ManageCategoryPage;
@@ -22,6 +24,9 @@ public class ManageCategoryPageTest extends Base {
 	  managecategory.scrollDown();
 	  managecategory.scrollDownToRadioMenus();
 	  managecategory.topMenus().leftMenu().saveButton();
+	  boolean homepageisdisplayed=login.isHomePageIsDisplayed();
+	  Assert.assertTrue(homepageisdisplayed,Constant.ERRORMESSAGEFORLOGIN);
+
 
 	  
   }
