@@ -19,9 +19,8 @@ public class AdminUserTest extends Base{
   @Test(description = "verify newuser add to the AdminUser",retryAnalyzer = retry.Retry.class)
   public void verifyAdminMoreInfo() throws IOException {
 	  LoginPageSuperMarket login=new LoginPageSuperMarket(driver);
-	  
-	  String username=ExcelUtilities.readStringData1(1, 0, "AdminUserTest");
-	  String password=ExcelUtilities.readStringData1(1, 1, "AdminUserTest");
+	  String username=ExcelUtilities.readStringData(1, 0, "LoginPageTest");
+	  String password=ExcelUtilities.readStringData(1, 1, "LoginPageTest");
 	  
 	  login.enterUsernameAndPassword(username, password);
 	  homepage=login.signIn();
