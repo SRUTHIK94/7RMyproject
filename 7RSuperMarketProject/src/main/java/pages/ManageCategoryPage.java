@@ -1,6 +1,5 @@
 package pages;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,12 +7,14 @@ import org.openqa.selenium.support.PageFactory;
 
 import constants.Constant;
 import utilities.FileUploadUtility;
+import utilities.PageUtility;
 import utilities.WaitUtility;
 
 public class ManageCategoryPage {
 	WebDriver driver;
 	WaitUtility wait = new WaitUtility();
 	FileUploadUtility file = new FileUploadUtility();
+	PageUtility pageutility = new PageUtility();
 
 	public ManageCategoryPage(WebDriver driver) {
 		this.driver = driver;
@@ -53,19 +54,19 @@ public class ManageCategoryPage {
 	public ManageCategoryPage manageCategoryFileChoose() {
 		file.sendKeysForFileUpload(choosefile, Constant.TESTIMAGE);
 		return this;
-		// choosefile.sendKeys(null);//Constant value insert
+
 	}
 
 	public ManageCategoryPage manageCategoryScrollDown() {
-		JavascriptExecutor script = (JavascriptExecutor) driver;
-		script.executeScript("window.scrollBy(0,5000)", "");
+		pageutility.manageCategoryScrollDown(driver);
+
 		return this;
 
 	}
 
 	public ManageCategoryPage manageCategoryScrollDownToRadioMenus() {
-		JavascriptExecutor script = (JavascriptExecutor) driver;
-		script.executeScript("window.scrollBy(0,5000)", "");
+		pageutility.manageCategoryScrollDownToRadioMenus(driver);
+
 		return this;
 
 	}

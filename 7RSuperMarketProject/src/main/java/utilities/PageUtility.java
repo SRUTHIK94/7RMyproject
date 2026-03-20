@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
+import pages.ManageCategoryPage;
+
 public class PageUtility {
 
 	public void selectByIndex(WebElement element, int index) {
@@ -29,12 +31,18 @@ public class PageUtility {
 		action.moveToElement(element).click();
 		action.doubleClick(element).click();
 	}
-	 public void scrollDown(WebDriver driver,WebElement element)
-		{
-			
-			JavascriptExecutor javascript=(JavascriptExecutor) driver;
-			javascript.executeScript("arguments[0].click();", element);
+	 
+		public void  manageCategoryScrollDownToRadioMenus(WebDriver driver) {
+			JavascriptExecutor script = (JavascriptExecutor) driver;
+			script.executeScript("window.scrollBy(0,5000)", "");
+
 		}
+		public void manageCategoryScrollDown(WebDriver driver) {
+			JavascriptExecutor script = (JavascriptExecutor) driver;
+			script.executeScript("window.scrollBy(0,5000)", "");
+
+		}
+
 
 
 }

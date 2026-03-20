@@ -17,11 +17,10 @@ public class AdminUserTest extends Base {
 	FakerUtility faker = new FakerUtility();// add faker globally
 
 	@Test(description = "verify newuser add to the AdminUserPage", retryAnalyzer = retry.Retry.class)
-	public void verifyAdminMoreInfo() throws IOException {
+	public void verifyAdminUserMoreInfo() throws IOException {
 		LoginPageSuperMarket login = new LoginPageSuperMarket(driver);
 		String username = ExcelUtilities.readStringData(1, 0, "LoginPageTest");
 		String password = ExcelUtilities.readStringData(1, 1, "LoginPageTest");
-
 		login.enterUsernameAndPassword(username, password);
 		homepage = login.signIn();
 		adminpage = homepage.moreHomePageInfo();

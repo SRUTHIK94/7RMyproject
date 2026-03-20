@@ -16,14 +16,17 @@ public class ManageCategoryPageTest extends Base {
 	ManageCategoryPage managecategory;
 
 	@Test(description = "Verify that a new category can be added to the Manage Page")
-	public void VerifyNewCategoryAdding() throws IOException {
+	public void VerifyNewManageCategoryAdding() throws IOException {
 		LoginPageSuperMarket login = new LoginPageSuperMarket(driver);
-		login.enterUsernameAndPassword("admin", "admin");
+		String username = ExcelUtilities.readStringData(1, 0, "AdminUserTest");
+		String password = ExcelUtilities.readStringData(1, 1, "AdminUserTest");
+
+		login.enterUsernameAndPassword(username, password);
 		homepage = login.signIn();
 		managecategory = homepage.moreInfoManageCategory();
 		managecategory.newManageCategoryButton();
-		managecategory.manageCategoryField(ExcelUtilities.readIntegerData1(1, 2, "AdminUserTest")).discountManageCategory()
-				.manageCategoryFileChoose();
+		managecategory.manageCategoryField(ExcelUtilities.readIntegerData1(1, 2, "AdminUserTest"))
+		.discountManageCategory().manageCategoryFileChoose();
 		managecategory.manageCategoryScrollDown();
 		managecategory.manageCategoryScrollDownToRadioMenus();
 		managecategory.manageCategoryTopMenus().manageCategoryLeftMenu().manageCategorySaveButton();
