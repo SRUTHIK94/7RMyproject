@@ -22,7 +22,7 @@ public class ManageNewsTest extends Base {
 		String password = ExcelUtilities.readStringData(1, 1, "LoginPageTest");
 		page.enterUsernameAndPassword(username, password);
 		homepage = page.signIn();
-		managenews = homepage.moreNewsInfoButton().newManageNewsButton()
+		managenews = homepage.moreManageNewsInfoButton().newManageNewsButton()
 		.enterNewsField(ExcelUtilities.readIntegerData1(1, 3, "AdminUserTest")).manageNewsSaveButton();
 		boolean homepageisdisplayed = page.isHomePageIsDisplayed();
 		Assert.assertTrue(homepageisdisplayed, Constant.ERRORMESSAGEFORLOGIN);

@@ -39,7 +39,7 @@ public class HomePageSuperMarket {
 		return this;
 	}
 
-	public ManageNews moreNewsInfoButton() {
+	public ManageNews moreManageNewsInfoButton() {
 		moreNewsinfo.click();
 		return new ManageNews(driver);
 	}
